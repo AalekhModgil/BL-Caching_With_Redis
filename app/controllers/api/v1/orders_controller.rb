@@ -4,7 +4,9 @@ class Api::V1::OrdersController < ApplicationController
     result = OrderService.create_order(order_params)
 
     if result[:success]
-      render json:  result[:body], status: created
+      # Rails.cache.delete("top_selling_products")
+      REDIS.del("top_selling_products")
+      render json:  result[:body], status: :created
     else
       render json: { errors: result[:error] }, status: :unprocessable_entity
     end
