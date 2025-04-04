@@ -83,7 +83,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
-    brakeman (7.0.0)
+    brakeman (7.0.1)
       racc
     builder (3.3.0)
     capybara (3.40.0)
@@ -241,7 +241,6 @@ GEM
       redis-client (>= 0.22.0)
     redis-client (0.23.2)
       connection_pool
-    redis-rails (0.0.0)
     regexp_parser (2.10.0)
     reline (0.6.0)
       io-console (~> 0.5)
@@ -356,7 +355,6 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.0.1)
   redis
-  redis-rails
   rubocop-rails-omakase
   selenium-webdriver
   solid_cable
